@@ -45,7 +45,8 @@ class OpenAIModel(OpenAIAPIModel):
                 api_key = os.getenv("OPENAI_API_KEY")
 
         if not api_key:
-            raise ValueError("API key is required for OpenAI/NVIDIA models and could not be found.")
+            api_key = "HACK_API_KEY"
+            # raise ValueError("API key is required for OpenAI/NVIDIA models and could not be found.")
 
         super().__init__(
             model=model,
